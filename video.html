@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="_assets/css/mystyle.css" media="screen">
+    <meta charset="utf-8">
+    <title>Web Portfolio: Edward Reyes' Video Page</title>
+      <link rel="shortcut icon" href="_assets/images/favicon.png">
+      <style>
+          div#myplayer {
+            justify-content: center;
+            font-size: 2em;
+            padding: 1em;
+            color: yellow;
+            font-weight: bold;
+            margin-top: 1em;
+            background-color: yellow;
+          }
+      </style>
+      <script>
+        var video, speed, volume;
+          
+        function init() {
+          // initialize the player
+          // first, get the meedia element and assign it to the video variable
+          video = document.getElementById('myvideo');
+          
+          // get the current playbackRate from the HTML5 media API
+          // range is 0 to very fast, with 1 being normal playback
+          speed = video.playbackRate;
+          
+          // volume range is 0 to 1 
+          // set it in the middle so we have room to move it with our buttons
+          volume = 0.5;
+          video.volume = volume; 
+        }
+          
+        function play() {
+          video.play();
+        }
+          function pause() {       
+          video.pause();
+        }
+      
+        function changeSpeed(direction) { 
+            // direction is either 'up' (faster) or 'down' (slower) 
+            if (direction == 'up') { 
+            if (speed < 10) { 
+            // increase playbackRate 
+            speed = speed + 0.1; 
+            }
+        }  
+            else if (direction == 'down') { 
+            if (speed > 0) {
+            // decrease playbackRate
+            speed = speed - 0.1; 
+            }
+        }
+  // so far all we've done is change the value of our speed variable 
+  // not let's assign it to the player 
+  video.playbackRate = speed;           
+}
+      
+function changeVolume(direction) { 
+  if (direction == 'up') { 
+    // if not fully cranked yet, increase volume 
+    if (volume < 0.9) {
+      volume = volume + 0.1; 
+    }
+  }  
+  else if (direction == 'down') { 
+    // if not muted, decrease volume
+    if (volume > 0.1) {  
+      volume = volume - 0.1; 
+    }
+  }       
+  // so far all we've done is change the value of our volume variable 
+  // not let's assign it to the player 
+  video.volume = volume;            
+} 
+      
+// wait until the web page has finished loading, then run the init function
+window.onload = init;
+    
+      </script>
+      
+      
+      
+      
+  </head>
+  <body>
+      <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="accessibility.html">Accessibility</a>
+            </li>
+            <li>
+                <a href="usability.html">Usability</a>
+            </li>
+            <li>
+                <a href="graphics.html">Graphics</a>
+            </li>
+            <li>
+                <a href="javascript.html">Javascript</a>
+            </li>
+            <li>
+                <a href="tools.html">Tools</a>
+            </li>
+            <li>
+                <a href="video.html">Video</a>
+            </li>
+        </ul>
+      </nav>
+    <h1>Web Portfolio: Video</h1>
+    <p>This video is about code.org.</p>
+    <video id= "myvideo" preload="none">
+        <source src="_assets/video/code.mp4" type="video/mp4"></source>
+        <source src="_assets/video/code.webm" type="video/webm"></source>
+        <track src="_assets/video/code.vtt" kind="captions" srclang="en" default></track>
+    </video>
+<div id="myplayer">
+  <button onclick="play()">Play</button>
+  <button onclick="pause()">Pause</button>
+  <button onclick="changeSpeed('up')">Faster</button>
+  <button onclick="changeSpeed('down')">Slower</button>
+  <button onclick="changeVolume('up')">Louder</button>
+  <button onclick="changeVolume('down')">Softer</button>
+</div>    
+  </body>
+</html>
