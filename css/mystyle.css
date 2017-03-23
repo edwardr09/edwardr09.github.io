@@ -1,0 +1,229 @@
+/*
+Edward Reyes
+Period 4
+
+Color scheme for this website:
+    #020207 Black
+    #0A0634 Navy Blue
+    #918DBA Bluish White
+    #968CF6 Whitish Blue
+    #D1E1FF Background Blue
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-size: 1em;
+	font-weight: normal;
+	font-family: Arial, "Times New Roman", Helvetica, Geneva Sans-serif;
+	text-align: left;
+	background-color: #D1E1FF;
+    background-image: url("http://www.planwallpaper.com/static/images/comic-sunburst-background-o.jpg");
+    padding: 5%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    border: 5px solid #FFFFFF;
+    line-height: 1;
+    width: 70%;
+    min-width: 720px;
+    margin: 0 auto;
+}
+h1 {
+    font-family: "Myriad Pro", "Arial Black", Impact, "Times New Roman" sans-serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #918DBA; /* blue */
+	text-align: center;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border: 3px solid #FFFFFF;
+    background-color: antiquewhite;
+    box-shadow: 8px 11px 48px -9px rgba(0,0,0,0.75);
+}
+h2 {
+	font: italic normal 1.4em georgia, sans-serif;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 2%;
+    margin-top: 2%;
+	color: #968CF6;
+    padding: 1%;
+    margin-left: 3%;
+    margin-right: 10%;
+    background-color: aliceblue;
+    box-shadow: 8px 11px 20px -9px rgba(0,0,0,0.75);
+}
+div {
+	margin-top: 0;
+	text-align: justify;
+    color: #0A0634;
+    padding: 1em;  /* use em instead of % here */
+    /*  margin-left: 5%;
+    margin-right: 70%;   if you remove this then your info divs will float next to each other */
+
+}
+p {
+	margin-top: 0;
+	text-align: justify;
+    color: #020207;
+    padding: 1%;
+    margin-left: 7%;
+    margin-right: 10%;
+}
+a {
+    color: darkgoldenrod;
+}
+a:hover {
+    color: black;
+    background-color: #FFFFCC;
+}
+
+/*  target the id="stuff" NOT all li tags -- this will make your
+nav bar stretch across the page but keep your ordered lists in
+the main section indented. */
+#stuff li {
+    margin-left: 5em;
+    margin-right: 10em;
+}
+
+ul {
+    margin-right: 10%;
+    margin-left: 5%;
+    padding: 1%;
+}
+div#skipnav {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    right: 12.5%;
+    width: 10em;
+    text-align: center;
+}
+div.info {
+    width: 40%;
+    font-size: 1.1em;
+    float: left;
+    text-align: left;  /* This will cancel out the text justify in your div css  */
+}
+#overview {
+    font-weight: bold;
+}
+.temp {
+    font-style: italic;
+}
+div#main, #divmain p, #overview {
+    background-color: azure;
+}
+div#main {
+    width: 20em;
+}
+div#tomiyasu {
+    margin-left: 8%
+}
+    
+/* nav menu styles */
+nav {
+    clear: left;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    float: left;
+    margin-right: 0.1em;
+}
+nav ul li a {
+    padding: 0.25em 1em;
+    text-decoration: none;
+    background-color: #EBF5FF;
+    color: #4312AE;
+    border: 2px solid black;
+    border-top-left-radius: 1em 1em;
+    border-top-right-radius: 1em 1em;
+}
+nav ul li a:hover, nav ul li a:focus {
+    color: black;
+    background-color: white;
+    /*  font-weight: bold; --- this makes the text jump when you hover on it */
+}
+main {
+    clear: left;
+    padding: 1em;
+}
+/* tables */
+table {
+    margin: 0 auto;
+    background-color: black;
+}
+th, td {
+    background-color: white;
+    color: black;
+    padding: 0.75em;
+    margin: 1px;
+}
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.7em;
+}
+  button { 
+    font-size: 1.1em;
+    background-color: #EBF5FF;
+    color: #4312AE;
+    border: 2px solid black;
+    box-shadow: 4px 4px 4px #999999;
+  }
+  button:hover, button:focus, button:active { 
+    /* swap colors */
+    color: #EBF5FF;
+    background-color: #4312AE;
+    cursor: pointer; /* displays a hand */
+  }
